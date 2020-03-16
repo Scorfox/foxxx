@@ -63,7 +63,7 @@ namespace UdpClientApp
                 while (true)
                 {
                     byte[] data = receiver.Receive(ref remoteIp); // получаем данные
-                    string message = Encoding.ASCII.GetString(data);
+                    string message = Encoding.Unicode.GetString(data);
                     Console.WriteLine("Эмулятор: {0:X4}", message);
                 }
             }
